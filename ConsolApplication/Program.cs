@@ -13,7 +13,19 @@ namespace ConsolApplication
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            //CreateHostBuilder(args).Build().Run();
+
+            Console.WriteLine(
+                "What's your name?");
+            string yourName = Console.ReadLine();
+            Console.WriteLine("Where are you from?");
+            string yourLocation = Console.ReadLine();
+            string result = $"My name is {yourName}, I am from {yourLocation}.";
+            Console.WriteLine(result);
+
+            Console.ReadKey();
+
+
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
