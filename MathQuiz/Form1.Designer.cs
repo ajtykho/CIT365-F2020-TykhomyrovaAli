@@ -49,8 +49,8 @@
             this.quotient = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.divideRightLabel = new System.Windows.Forms.Label();
-            this.divideLeftLabel = new System.Windows.Forms.Label();
+            this.dividedRightLabel = new System.Windows.Forms.Label();
+            this.dividedLeftLabel = new System.Windows.Forms.Label();
             this.startButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.sum)).BeginInit();
@@ -254,25 +254,25 @@
             this.label11.Text = "=";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // divideRightLabel
+            // dividedRightLabel
             // 
-            this.divideRightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.divideRightLabel.Location = new System.Drawing.Point(278, 405);
-            this.divideRightLabel.Name = "divideRightLabel";
-            this.divideRightLabel.Size = new System.Drawing.Size(60, 50);
-            this.divideRightLabel.TabIndex = 18;
-            this.divideRightLabel.Text = "?";
-            this.divideRightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dividedRightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dividedRightLabel.Location = new System.Drawing.Point(278, 405);
+            this.dividedRightLabel.Name = "dividedRightLabel";
+            this.dividedRightLabel.Size = new System.Drawing.Size(60, 50);
+            this.dividedRightLabel.TabIndex = 18;
+            this.dividedRightLabel.Text = "?";
+            this.dividedRightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // divideLeftLabel
+            // dividedLeftLabel
             // 
-            this.divideLeftLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.divideLeftLabel.Location = new System.Drawing.Point(158, 405);
-            this.divideLeftLabel.Name = "divideLeftLabel";
-            this.divideLeftLabel.Size = new System.Drawing.Size(60, 50);
-            this.divideLeftLabel.TabIndex = 17;
-            this.divideLeftLabel.Text = "?";
-            this.divideLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dividedLeftLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dividedLeftLabel.Location = new System.Drawing.Point(158, 405);
+            this.dividedLeftLabel.Name = "dividedLeftLabel";
+            this.dividedLeftLabel.Size = new System.Drawing.Size(60, 50);
+            this.dividedLeftLabel.TabIndex = 17;
+            this.dividedLeftLabel.Text = "?";
+            this.dividedLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // startButton
             // 
@@ -300,8 +300,8 @@
             this.Controls.Add(this.quotient);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.divideRightLabel);
-            this.Controls.Add(this.divideLeftLabel);
+            this.Controls.Add(this.dividedRightLabel);
+            this.Controls.Add(this.dividedLeftLabel);
             this.Controls.Add(this.product);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
@@ -354,8 +354,8 @@
         private System.Windows.Forms.NumericUpDown quotient;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label divideRightLabel;
-        private System.Windows.Forms.Label divideLeftLabel;
+        private System.Windows.Forms.Label dividedRightLabel;
+        private System.Windows.Forms.Label dividedLeftLabel;
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Timer timer1;
     }
