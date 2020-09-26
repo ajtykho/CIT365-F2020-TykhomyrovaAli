@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace MathQuiz
 {
+
     public partial class Form1 : Form
     {
+        //creating sound player variable to play music
+        SoundPlayer player = new SoundPlayer(@"C:\Users\Ali\Desktop\Fall2020\.Net365\mathQuiz\applause.wav");
+
         // Create a Random object called randomizer 
         // to generate random numbers.
         Random randomizer = new Random();
@@ -123,7 +128,7 @@ namespace MathQuiz
                 timeLeft = timeLeft - 1;
                 timeLabel.Text = timeLeft + " seconds";
             }
-            else if (timeLeft > 0)
+            else if (timeLeft > 5)
             {
                 // If CheckTheAnswer() return false, keep counting
                 // down. Decrease the time left by one second and 
@@ -131,6 +136,7 @@ namespace MathQuiz
                 // Time Left label.
                 timeLeft--;
                 timeLabel.Text = timeLeft + " seconds";
+                if (timeLeft < 5) { timeLabel.BackColor = Color.Red; } //!!!!DOUBLE CHECK THIS
             }
             else
             {
@@ -157,6 +163,40 @@ namespace MathQuiz
             {
                 int lengthOfAnswer = answerBox.Value.ToString().Length;
                 answerBox.Select(0, lengthOfAnswer);
+            }
+        }
+
+        private void correctAnsNoise(object sender, EventArgs e)
+        {
+
+            if (addend1 + addend2 == sum.Value)
+            {
+                player.Play();
+            }
+
+        }
+
+        private void correctAnsNoise2(object sender, EventArgs e)
+        {
+            if (minuend - subtrahend == difference.Value)
+            {
+                player.Play();
+            }
+        }
+
+        private void correctAnsNoise3(object sender, EventArgs e)
+        {
+            if (multiplicand * multiplier == product.Value)
+            {
+                player.Play();
+            }
+        }
+
+        private void correctAnsNoise4(object sender, EventArgs e)
+        {
+            if (dividend / divisor == quotient.Value)
+            {
+                player.Play();
             }
         }
     }
