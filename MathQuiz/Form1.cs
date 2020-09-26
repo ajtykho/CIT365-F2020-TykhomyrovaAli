@@ -83,6 +83,15 @@ namespace MathQuiz
                 timeLeft = timeLeft - 1;
                 timeLabel.Text = timeLeft + " seconds";
             }
+            else if (timeLeft > 0)
+            {
+                // If CheckTheAnswer() return false, keep counting
+                // down. Decrease the time left by one second and 
+                // display the new time left by updating the 
+                // Time Left label.
+                timeLeft--;
+                timeLabel.Text = timeLeft + " seconds";
+            }
             else
             {
                 // If the user ran out of time, stop the timer, show
@@ -92,6 +101,19 @@ namespace MathQuiz
                 MessageBox.Show("You didn't finish in time.", "Sorry!");
                 sum.Value = addend1 + addend2;
                 startButton.Enabled = true;
+            }
+
+        }
+
+        private void answer_Enter(object sender, EventArgs e)
+        {
+            // Select the whole answer in the NumericUpDown control.
+            NumericUpDown answerBox = sender as NumericUpDown;
+
+            if (answerBox != null)
+            {
+                int lengthOfAnswer = answerBox.Value.ToString().Length;
+                answerBox.Select(0, lengthOfAnswer);
             }
         }
     }
