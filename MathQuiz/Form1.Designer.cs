@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.timeLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.plusLeftLabel = new System.Windows.Forms.Label();
@@ -63,9 +64,9 @@
             // 
             this.timeLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.timeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeLabel.Location = new System.Drawing.Point(452, 36);
+            this.timeLabel.Location = new System.Drawing.Point(452, 18);
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(200, 30);
+            this.timeLabel.Size = new System.Drawing.Size(200, 48);
             this.timeLabel.TabIndex = 0;
             // 
             // label1
@@ -123,7 +124,7 @@
             this.sum.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sum.Location = new System.Drawing.Point(452, 93);
             this.sum.Name = "sum";
-            this.sum.Size = new System.Drawing.Size(100, 62);
+            this.sum.Size = new System.Drawing.Size(154, 62);
             this.sum.TabIndex = 2;
             this.sum.ValueChanged += new System.EventHandler(this.correctAnsNoise);
             this.sum.Enter += new System.EventHandler(this.answer_Enter);
@@ -133,7 +134,7 @@
             this.difference.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.difference.Location = new System.Drawing.Point(452, 193);
             this.difference.Name = "difference";
-            this.difference.Size = new System.Drawing.Size(100, 62);
+            this.difference.Size = new System.Drawing.Size(154, 62);
             this.difference.TabIndex = 3;
             this.difference.ValueChanged += new System.EventHandler(this.correctAnsNoise2);
             this.difference.Enter += new System.EventHandler(this.answer_Enter);
@@ -183,7 +184,7 @@
             this.product.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.product.Location = new System.Drawing.Point(452, 294);
             this.product.Name = "product";
-            this.product.Size = new System.Drawing.Size(100, 62);
+            this.product.Size = new System.Drawing.Size(154, 62);
             this.product.TabIndex = 4;
             this.product.ValueChanged += new System.EventHandler(this.correctAnsNoise3);
             this.product.Enter += new System.EventHandler(this.answer_Enter);
@@ -233,7 +234,7 @@
             this.quotient.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quotient.Location = new System.Drawing.Point(452, 401);
             this.quotient.Name = "quotient";
-            this.quotient.Size = new System.Drawing.Size(100, 62);
+            this.quotient.Size = new System.Drawing.Size(154, 62);
             this.quotient.TabIndex = 5;
             this.quotient.ValueChanged += new System.EventHandler(this.correctAnsNoise4);
             this.quotient.Enter += new System.EventHandler(this.answer_Enter);
@@ -299,7 +300,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1111, 599);
+            this.ClientSize = new System.Drawing.Size(839, 599);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.quotient);
             this.Controls.Add(this.label10);
@@ -324,6 +325,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.timeLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Ali Tykhomyrova - Math Quiz";
