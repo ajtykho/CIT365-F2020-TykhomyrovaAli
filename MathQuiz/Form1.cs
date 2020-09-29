@@ -45,6 +45,15 @@ namespace MathQuiz
         // remaining time.
         int timeLeft;
 
+        public Form1()
+
+        {
+
+            InitializeComponent();
+            StartTheQuiz();
+
+        }
+
         /// <summary>
         /// Start the quiz by filling in all of the problems
         /// and starting the timer.
