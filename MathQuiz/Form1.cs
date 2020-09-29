@@ -50,6 +50,7 @@ namespace MathQuiz
         {
 
             InitializeComponent();
+            Date.Text = DateTime.Now.ToString("dd, MMMM yyyy");
             StartTheQuiz();
 
         }
@@ -59,7 +60,10 @@ namespace MathQuiz
         /// and starting the timer.
         /// </summary>
         public void StartTheQuiz()
+
         {
+            
+
             // Fill in the addition problem.
             // Generate two random numbers to add.
             // Store the values in the variables 'addend1' and 'addend2'.
