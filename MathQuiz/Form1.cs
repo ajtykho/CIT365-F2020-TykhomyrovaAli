@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
+using System.Xml;
 
 namespace MathQuiz
 {
@@ -130,6 +131,7 @@ namespace MathQuiz
         {
             StartTheQuiz();
             startButton.Enabled = false;
+            timeLabel.BackColor = Color.Transparent;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -140,17 +142,11 @@ namespace MathQuiz
                 // by updating the Time Left label.
                 timeLeft = timeLeft - 1;
                 timeLabel.Text = timeLeft + " seconds";
+
+
+                    if (timeLeft < 5) { timeLabel.BackColor = Color.Red; } 
             }
-            else if (timeLeft > 5)
-            {
-                // If CheckTheAnswer() return false, keep counting
-                // down. Decrease the time left by one second and 
-                // display the new time left by updating the 
-                // Time Left label.
-                timeLeft--;
-                timeLabel.Text = timeLeft + " seconds";
-                if (timeLeft < 5) { timeLabel.BackColor = Color.Red; } //!!!!DOUBLE CHECK THIS
-            }
+            
             else
             {
                 // If the user ran out of time, stop the timer, show 
