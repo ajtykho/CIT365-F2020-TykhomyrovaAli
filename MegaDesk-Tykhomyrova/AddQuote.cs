@@ -16,5 +16,10 @@ namespace MegaDesk_Tykhomyrova
         {
             InitializeComponent();
         }
+
+        private void formSubmission_Click(object sender, EventArgs e)
+        {
+            // How to pass objects between two forms
+        }
     }
 }

@@ -80,6 +80,12 @@
     <Compile Include="ViewAllQuotes.Designer.cs">
       <DependentUpon>ViewAllQuotes.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddQuote.resx">
+      <DependentUpon>AddQuote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

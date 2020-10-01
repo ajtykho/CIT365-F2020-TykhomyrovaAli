@@ -16,5 +16,26 @@ namespace MegaDesk_Tykhomyrova
         {
             InitializeComponent();
         }
+
+        private void AddQuoteButtom_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ViewQuotesButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SearchQuotesButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            //Closes the main menu form
+            Close();
+        }
     }
 }
