@@ -28,12 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.backButton = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // backButton
+            // 
+            this.backButton.Location = new System.Drawing.Point(44, 372);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(150, 53);
+            this.backButton.TabIndex = 0;
+            this.backButton.Text = "Back";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
+            // SearchQuotes
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "SearchQuotes";
+            this.Controls.Add(this.backButton);
+            this.Name = "SearchQuotes";
+            this.Text = "Search Quotes";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button backButton;
     }
 }

@@ -37,9 +37,9 @@
             // AddQuoteButtom
             // 
             this.AddQuoteButtom.AutoSize = true;
-            this.AddQuoteButtom.Location = new System.Drawing.Point(37, 67);
+            this.AddQuoteButtom.Location = new System.Drawing.Point(134, 63);
             this.AddQuoteButtom.Name = "AddQuoteButtom";
-            this.AddQuoteButtom.Size = new System.Drawing.Size(124, 35);
+            this.AddQuoteButtom.Size = new System.Drawing.Size(229, 122);
             this.AddQuoteButtom.TabIndex = 0;
             this.AddQuoteButtom.Text = "&Add Quote";
             this.AddQuoteButtom.UseVisualStyleBackColor = true;
@@ -48,9 +48,9 @@
             // ViewQuotesButton
             // 
             this.ViewQuotesButton.AutoSize = true;
-            this.ViewQuotesButton.Location = new System.Drawing.Point(135, 153);
+            this.ViewQuotesButton.Location = new System.Drawing.Point(134, 222);
             this.ViewQuotesButton.Name = "ViewQuotesButton";
-            this.ViewQuotesButton.Size = new System.Drawing.Size(132, 35);
+            this.ViewQuotesButton.Size = new System.Drawing.Size(229, 120);
             this.ViewQuotesButton.TabIndex = 1;
             this.ViewQuotesButton.Text = "&View Quote";
             this.ViewQuotesButton.UseVisualStyleBackColor = true;
@@ -59,9 +59,9 @@
             // SearchQuotesButton
             // 
             this.SearchQuotesButton.AutoSize = true;
-            this.SearchQuotesButton.Location = new System.Drawing.Point(116, 234);
+            this.SearchQuotesButton.Location = new System.Drawing.Point(134, 382);
             this.SearchQuotesButton.Name = "SearchQuotesButton";
-            this.SearchQuotesButton.Size = new System.Drawing.Size(165, 35);
+            this.SearchQuotesButton.Size = new System.Drawing.Size(229, 118);
             this.SearchQuotesButton.TabIndex = 2;
             this.SearchQuotesButton.Text = "&Search Quotes";
             this.SearchQuotesButton.UseVisualStyleBackColor = true;
@@ -70,9 +70,9 @@
             // ExitButton
             // 
             this.ExitButton.AutoSize = true;
-            this.ExitButton.Location = new System.Drawing.Point(116, 325);
+            this.ExitButton.Location = new System.Drawing.Point(134, 544);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(94, 35);
+            this.ExitButton.Size = new System.Drawing.Size(229, 123);
             this.ExitButton.TabIndex = 3;
             this.ExitButton.Text = "E&xit";
             this.ExitButton.UseVisualStyleBackColor = true;
@@ -88,7 +88,7 @@
             this.Controls.Add(this.ViewQuotesButton);
             this.Controls.Add(this.AddQuoteButtom);
             this.Name = "MainMenu";
-            this.Text = "Form1";
+            this.Text = "Main Menu";
             this.ResumeLayout(false);
             this.PerformLayout();
 

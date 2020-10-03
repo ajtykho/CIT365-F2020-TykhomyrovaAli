@@ -19,17 +19,26 @@ namespace MegaDesk_Tykhomyrova
 
         private void AddQuoteButtom_Click(object sender, EventArgs e)
         {
-
+            AddQuote viewAddQuote = new AddQuote();
+            viewAddQuote.Tag = this;
+            viewAddQuote.Show(this);
+            this.Hide();
         }
 
         private void ViewQuotesButton_Click(object sender, EventArgs e)
         {
-
+            ViewAllQuotes viewViewAllQuotes = new ViewAllQuotes();
+            viewViewAllQuotes.Tag = this;
+            viewViewAllQuotes.Show(this);
+            this.Hide();
         }
 
         private void SearchQuotesButton_Click(object sender, EventArgs e)
         {
-
+            SearchQuotes viewSearchQuotes = new SearchQuotes();
+            viewSearchQuotes.Tag = this;
+            viewSearchQuotes.Show(this);
+            this.Hide();
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
