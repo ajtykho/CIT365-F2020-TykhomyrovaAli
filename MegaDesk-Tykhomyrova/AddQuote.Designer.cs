@@ -42,6 +42,7 @@
             this.rushInput = new System.Windows.Forms.ComboBox();
             this.formSubmission = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
+            this.Date = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // customerNameLabel
@@ -184,11 +185,21 @@
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
+            // Date
+            // 
+            this.Date.AutoSize = true;
+            this.Date.Location = new System.Drawing.Point(126, 20);
+            this.Date.Name = "Date";
+            this.Date.Size = new System.Drawing.Size(95, 25);
+            this.Date.TabIndex = 14;
+            this.Date.Text = "date box";
+            // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1107, 620);
+            this.Controls.Add(this.Date);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.formSubmission);
             this.Controls.Add(this.rushInput);
@@ -226,5 +237,6 @@
         private System.Windows.Forms.ComboBox rushInput;
         private System.Windows.Forms.Button formSubmission;
         private System.Windows.Forms.Button backButton;
+        private System.Windows.Forms.Label Date;
     }
 }

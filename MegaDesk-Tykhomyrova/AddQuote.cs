@@ -8,20 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace MegaDesk_Tykhomyrova
 {
     public partial class AddQuote : Form
     {
+
         public AddQuote()
         {
             InitializeComponent();
+            Date.Text = DateTime.Now.ToString("dd, MMMM yyyy");
+
         }
 
+        //calculate the quote
         private void formSubmission_Click(object sender, EventArgs e)
         {
-            // How to pass objects between two forms
+            return DeskQuote.DeskQuote();
         }
 
+        
+
+        //let user go back to the main menu
         private void backButton_Click(object sender, EventArgs e)
         {
             MainMenu viewMainMenu = (MainMenu)Tag;
@@ -29,6 +37,7 @@ namespace MegaDesk_Tykhomyrova
             Close();
         }
 
+        //make sure width input is valid
         private void widthInput_Validating(object sender, EventArgs e)
         {
             //test if input is an int
@@ -61,6 +70,7 @@ namespace MegaDesk_Tykhomyrova
             
         }
 
+        //make sure depth input is valid
         private void depthInput_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             int i = 0;
