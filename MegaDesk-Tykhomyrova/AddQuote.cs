@@ -24,10 +24,22 @@ namespace MegaDesk_Tykhomyrova
         //calculate the quote
         private void formSubmission_Click(object sender, EventArgs e)
         {
-            return DeskQuote.DeskQuote();
+            var desk = new Desk();
+            var quote = new DeskQuote();
+
+            desk.deskWidth = 1;
+            desk.deskDepth = 1;
+            desk.materialType = materialInput.Text;
+            desk.numDrawers = 1;
+
+            var displayQuote = new DisplayQuote(desk);
+
+            displayQuote.Show();
+
+            Hide();
         }
 
-        
+
 
         //let user go back to the main menu
         private void backButton_Click(object sender, EventArgs e)
@@ -46,7 +58,7 @@ namespace MegaDesk_Tykhomyrova
             {
                 int width = int.Parse(widthInput.Text);
                 // if user input is >= 24 and <=96
-                if (width >=24 && width <=96)
+                if (width >= 24 && width <= 96)
                 {
                     // accept the user input?
                     int officialWidthInput = int.Parse(widthInput.Text);
@@ -67,7 +79,7 @@ namespace MegaDesk_Tykhomyrova
                 widthInput.BackColor = Color.Red;
                 MessageBox.Show("Please enter a number value between 24 and 96");
             }
-            
+
         }
 
         //make sure depth input is valid
@@ -76,7 +88,7 @@ namespace MegaDesk_Tykhomyrova
             int i = 0;
             if (!Char.IsControl(depthInput.Text, i))
             {
-                if(!Char.IsDigit(depthInput.Text, i))
+                if (!Char.IsDigit(depthInput.Text, i))
                 {
                     //test if input is an int
                     int x;

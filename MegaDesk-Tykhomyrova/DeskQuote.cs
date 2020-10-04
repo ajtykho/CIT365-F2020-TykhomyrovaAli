@@ -148,8 +148,8 @@ namespace MegaDesk_Tykhomyrova
         public DeskQuote()
         {
 
-            double drawerTotal = newDesk.numDrawers * drawerBasePrice;
-            double quoteTotal = basePrice + areaPrice + drawerTotal + materialPrice + rushPrice;
+            drawerTotal = newDesk.numDrawers * drawerBasePrice;
+            quoteTotal = basePrice + areaPrice + drawerTotal + materialPrice + rushPrice;
 
         }
 
