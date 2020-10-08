@@ -27,9 +27,14 @@ namespace MegaDesk_Tykhomyrova
 
         private void backMainMenu_Click(object sender, EventArgs e)
         {
-            MainMenu viewMainMenu = (MainMenu)Tag;
-            viewMainMenu.Show();
-            Close();
+           // MainMenu viewMainMenu = (MainMenu)Tag;
+         //   viewMainMenu.Show();
+           // Close();
+
+            MainMenu viewMainMenu = new MainMenu();
+            viewMainMenu.Tag = this;
+            viewMainMenu.Show(this);
+            this.Hide();
         }
 
 
