@@ -24,6 +24,9 @@ namespace MegaDesk_Tykhomyrova
         //calculate the quote
         private void formSubmission_Click(object sender, EventArgs e)
         {
+            widthInput_Validating(widthInput.Text);
+            depthInput_KeyDown(depthInput.Text);
+
             var desk = new Desk();
             var quote = new DeskQuote();
 
@@ -50,7 +53,7 @@ namespace MegaDesk_Tykhomyrova
         }
 
         //make sure width input is valid
-        private void widthInput_Validating(object sender, EventArgs e)
+        private void widthInput_Validating(string e)
         {
             //test if input is an int
             int i;
@@ -83,7 +86,7 @@ namespace MegaDesk_Tykhomyrova
         }
 
         //make sure depth input is valid
-        private void depthInput_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        private void depthInput_KeyDown(string e)
         {
             int i = 0;
             if (!Char.IsControl(depthInput.Text, i))
