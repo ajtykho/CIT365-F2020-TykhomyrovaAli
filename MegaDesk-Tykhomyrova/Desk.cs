@@ -8,7 +8,7 @@ namespace MegaDesk_Tykhomyrova
 {
 
     //create enum for material types
-    enum DesktopMaterial
+    public enum DesktopMaterial
     {
         Oak = 200,
         Laminate = 100,

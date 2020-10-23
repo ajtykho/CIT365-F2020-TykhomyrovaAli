@@ -6,34 +6,35 @@ using System.Threading.Tasks;
 
 namespace MegaDesk_Tykhomyrova
 {
-    class DeskQuote
+    public class DeskQuote
     {
 
         //variables from form and create new object
-        private Desk newDesk = new Desk();
-        private string customerName;
-        private int rushDays;
-        private DateTime submissionDate;
+    /*    private Desk newDesk = new Desk();
+        private DeskQuote newDeskQuote = new DeskQuote();*/
+        public string customerName;
+        public int rushDays;
+        public DateTime submissionDate;
 
         //variables for functions to save numbers
-        private int areaPrice;
-        private int materialPrice;
-        private int rushPrice;
-        private int quoteTotal;
-        private int drawerTotal;
-        private int deskArea;
+        public int areaPrice;
+        public int materialPrice;
+        public int rushPrice;
+        public int quoteTotal;
+        public int drawerTotal;
+        public int deskArea;
 
         //base prices for certain objects
-        private const int basePrice = 200;
-        private const int averageSize = 1000;
-        private const int drawerBasePrice = 50;
+        public const int basePrice = 200;
+        public const int averageSize = 1000;
+        public const int drawerBasePrice = 50;
 
         //calculate surface area
         private int calcdeskArea(int width, int depth)
         {
             //get depth and width
-            newDesk.deskWidth = width;
-            newDesk.deskDepth = depth;
+            this.deskWidth = width;
+            this.deskDepth = depth;
             //calculate area and return
             deskArea = newDesk.deskWidth * newDesk.deskDepth;
             return deskArea;

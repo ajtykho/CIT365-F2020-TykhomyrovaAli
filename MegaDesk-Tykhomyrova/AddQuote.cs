@@ -27,17 +27,25 @@ namespace MegaDesk_Tykhomyrova
             widthInput_Validating(widthInput.Text);
             depthInput_KeyDown(depthInput.Text);
 
+
             var desk = new Desk();
             var quote = new DeskQuote();
 
-            desk.deskWidth = 1;
-            desk.deskDepth = 1;
+            desk.deskWidth = int.Parse(widthInput.Text);
+            desk.deskDepth = int.Parse(depthInput.Text);
             desk.materialType = materialInput.Text;
-            desk.numDrawers = 1;
+            desk.numDrawers = int.Parse(numDrawersInput.Text);
+            
 
-            var displayQuote = new DisplayQuote(desk);
+            var displayQuote = new DisplayQuote(desk, quote);
+            //var deskWidth = new DisplayQuote(desk, quote);
+            //var deskDepth = new DisplayQuote(desk, quote);
+            //var numDrawers = new DisplayQuote(desk, quote);
 
             displayQuote.Show();
+            //deskWidth.Show();
+            //deskDepth.Show();
+            //numDrawers.Show();
 
             Hide();
         }
