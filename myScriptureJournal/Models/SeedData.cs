@@ -14,7 +14,7 @@ namespace RazorPagesScripture.Models
             using (var context = new myScriptureJournalContext(
                 serviceProvider.GetRequiredService<DbContextOptions<myScriptureJournalContext>>()))
             {
-                // Look for any movies.
+                // Look for any scriptures
                 if (context.Scripture.Any())
                 {
                     return;   // DB has been seeded
