@@ -12,32 +12,32 @@
 </p>
 
 
-    <form>
-        <p>
-            <select asp-for="ScriptureTitle" asp-items="Model.Book">
-                <option value="">Book</option>
-                <option value="">Date</option>
-            </select>
-            Book: <input type="text" asp-for="SearchString" />
-            @*<input type="submit" value="Filter Book" />*@
-            Date: <input type="text" asp-for="myDate" />
-            @*<input type="submit" value="Filter Date" />*@
-           @* Notes: <input type="text" asp-for="Book" />*@
-            <input type="submit" value="Filter" />
-        </p>
-    </form>
+<form>
+    <p>
+        <select asp-for="ScriptureTitle" asp-items="Model.GetBookSelectList()">
+            <option value="">Book</option>
+            <option value="">Date</option>
+        </select>
+        Book: <input type="text" asp-for="SearchString" />
+        @*<input type="submit" value="Filter Book" />*@
+        Date: <input type="text" asp-for="MyDate" />
+        @*<input type="submit" value="Filter Date" />*@
+        @* Notes: <input type="text" asp-for="Book" />*@
+        <input type="submit" value="Filter" />
+    </p>
+</form>
 
 
 
-    @*<p>
-            <select asp-for="ScriptureBook" asp-items="Model.ScriptureBook">
-                <option value="">Book</option>
-                <option value="">Date</option>
+@*<p>
+    <select asp-for="ScriptureBook" asp-items="Model.ScriptureBook">
+    <option value="">Book</option>
+    <option value="">Date</option>
 
-            </select>
-            Title: <input type="text" asp-for="SearchString"/>
-            <input type="submit" value="Filter" />
-        </p>*@
+    </select>
+    Title: <input type="text" asp-for="SearchString"/>
+    <input type="submit" value="Filter" />
+    </p>*@
 
 <table class="table">
     <thead>

@@ -13,32 +13,39 @@ namespace myScriptureJournal.Pages.Scriptures
 {
     public class IndexModel : PageModel
     {
-        private readonly myScriptureJournal.Data.myScriptureJournalContext _context;
+        private readonly myScriptureJournalContext _context;
 
-        public IndexModel(myScriptureJournal.Data.myScriptureJournalContext context)
+        private SelectList bookSelectList;
+
+        public IndexModel(myScriptureJournalContext context)
         {
             _context = context;
-            Book = new SelectList(new List<string>() {"Date", "Book" });
+            //Book = new SelectList(new List<string>() {"Date", "Book" });
         }
 
-        public IList<Scripture> Scripture { get;set; }
+        public IList<Scripture> Scripture { get; set; }
         [BindProperty(SupportsGet = true)]
 
         //search variables
         public string SearchString { get; set; }
-        [BindProperty(SupportsGet = true)]
+
+        //[BindProperty(SupportsGet = true)]
         // Requires using Microsoft.AspNetCore.Mvc.Rendering;
-        public SelectList Book { get; set; }
+        //public SelectList Book{get; set;}
+        public SelectList GetBookSelectList()
+        {
+            return bookSelectList;
+        }
 
         [BindProperty(SupportsGet = true)]
         public string ScriptureBook { get; set; }
 
-       
+
         [BindProperty(SupportsGet = true)]
         public string ScriptureTitle { get; set; }
 
         [BindProperty(SupportsGet = true)]
-        public string myDate { get; set; }
+        public string MyDate { get; set; }
 
         [BindProperty(SupportsGet = true)]
         public string Notes { get; set; }
@@ -49,18 +56,18 @@ namespace myScriptureJournal.Pages.Scriptures
         public string BookSort { get; set; }
         [BindProperty(SupportsGet = true)]
         public string DateSort { get; set; }
-        
+
 
 
         public async Task OnGetAsync(string sortOrder)
         {
             // Use LINQ to get list of titles.
             IQueryable<string> bookQuery = from s in _context.Scripture
-                                            orderby s.Book
-                                            select s.Book;
+                                           orderby s.Book
+                                           select s.Book;
 
             var scriptures = from s in _context.Scripture
-                         select s;
+                             select s;
 
             if (!string.IsNullOrEmpty(SearchString))
             {
@@ -71,11 +78,11 @@ namespace myScriptureJournal.Pages.Scriptures
                 scriptures = scriptures.Where(d => d.AddedDate == Convert.ToDateTime(DateSort));
             }
 
-           Book = new SelectList(await bookQuery.Distinct().ToListAsync());
+            bookSelectList = new SelectList(await bookQuery.Distinct().ToListAsync());
 
             Scripture = await scriptures.ToListAsync();
 
-/*
+
             BookSort = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             DateSort = sortOrder == "Date" ? "date_desc" : "Date";
 
@@ -93,9 +100,9 @@ namespace myScriptureJournal.Pages.Scriptures
                 case "Book":
                     //Scripture = Scripture.OrderByDescending(s => s.Book);
                     break;
-            }*/
+            }
 
-          
+
         }
 
     }
