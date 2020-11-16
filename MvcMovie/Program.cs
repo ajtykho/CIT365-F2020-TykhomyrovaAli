@@ -6,6 +6,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using MvcMovie.Models;
 using MvcMovie;
+using MvcMovie.Data;
 
 namespace MvcMovie
 {
