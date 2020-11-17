@@ -24,36 +24,36 @@ namespace MvcMovie.Models
                     new Movie
                     {
                         Title = "The RM",
-                        ReleaseDate = DateTime.Parse("1989-2-12"),
-                        Genre = "Comedy",
-                        Rating = "PG-13",
+                        ReleaseDate = DateTime.Parse("2003-1-31"),
+                        Genre = "Comedy/Religion",
+                        Rating = "PG",
                         Price = 7.99M
                     },
 
                     new Movie
                     {
-                        Title = "Best Two Years",
-                        ReleaseDate = DateTime.Parse("1984-3-13"),
-                        Genre = "Comedy",
-                        Rating = "PG-13",
+                        Title = "The Best Two Years",
+                        ReleaseDate = DateTime.Parse("2004-2-20"),
+                        Genre = "Comedy/Drama",
+                        Rating = "PG",
                         Price = 8.99M
                     },
 
                     new Movie
                     {
                         Title = "Baptists at Our Barbeque",
-                        ReleaseDate = DateTime.Parse("1986-2-23"),
+                        ReleaseDate = DateTime.Parse("2004-10-08"),
                         Genre = "Romantic Comedy",
-                        Rating = "PG-13",
+                        Rating = "PG",
                         Price = 9.99M
                     },
 
                     new Movie
                     {
-                        Title = "Charlie",
-                        ReleaseDate = DateTime.Parse("1959-4-15"),
-                        Genre = "Drama",
-                        Rating = "PG-13",
+                        Title = "Charly",
+                        ReleaseDate = DateTime.Parse("2002-11-20"),
+                        Genre = "Drama/Comedy/Romance",
+                        Rating = "PG",
                         Price = 3.99M
                     }
                 );
