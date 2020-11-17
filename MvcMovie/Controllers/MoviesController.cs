@@ -23,8 +23,6 @@ namespace MvcMovie.Controllers
         public async Task<IActionResult> Index(string movieGenre, string searchString, string sortOrder)
         {
 
-            ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
-
             // Use LINQ to get list of genres.
             IQueryable<string> genreQuery = from m in _context.Movie
                                             orderby m.Genre
@@ -49,7 +47,21 @@ namespace MvcMovie.Controllers
                 Movies = await movies.ToListAsync()
             };
 
-            return View(movieGenreVM);
+            ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
+            var students = from s in _context.Movie
+                           select s;
+            switch (sortOrder)
+            {
+                case "Date":
+                    students = students.OrderBy(s => s.ReleaseDate);
+                    break;
+                case "date_desc":
+                    students = students.OrderByDescending(s => s.ReleaseDate);
+                    break;
+            }
+            
+
+           return View(movieGenreVM);
         }
 
         // GET: Movies/Details/5

@@ -27,7 +27,8 @@ namespace MvcMovie.Models
                         ReleaseDate = DateTime.Parse("2003-1-31"),
                         Genre = "Comedy/Religion",
                         Rating = "PG",
-                        Price = 7.99M
+                        Price = 7.99M,
+                        ImgPath = "thrm.JPG"
                     },
 
                     new Movie
@@ -36,7 +37,8 @@ namespace MvcMovie.Models
                         ReleaseDate = DateTime.Parse("2004-2-20"),
                         Genre = "Comedy/Drama",
                         Rating = "PG",
-                        Price = 8.99M
+                        Price = 8.99M,
+                        ImgPath = "best2years.JPG"
                     },
 
                     new Movie
@@ -45,7 +47,8 @@ namespace MvcMovie.Models
                         ReleaseDate = DateTime.Parse("2004-10-08"),
                         Genre = "Romantic Comedy",
                         Rating = "PG",
-                        Price = 9.99M
+                        Price = 9.99M,
+                        ImgPath = "baptists.JPG"
                     },
 
                     new Movie
@@ -54,7 +57,8 @@ namespace MvcMovie.Models
                         ReleaseDate = DateTime.Parse("2002-11-20"),
                         Genre = "Drama/Comedy/Romance",
                         Rating = "PG",
-                        Price = 3.99M
+                        Price = 3.99M,
+                        ImgPath = "charly.JPG"
                     }
                 );
                 context.SaveChanges();
