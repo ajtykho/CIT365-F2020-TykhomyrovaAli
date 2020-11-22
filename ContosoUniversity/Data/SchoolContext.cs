@@ -1,8 +1,5 @@
 ﻿using ContosoUniversity.Models;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace ContosoUniversity.Data
 {
@@ -22,6 +19,5 @@ namespace ContosoUniversity.Data
             modelBuilder.Entity<Enrollment>().ToTable("Enrollment");
             modelBuilder.Entity<Student>().ToTable("Student");
         }
-
     }
 }
