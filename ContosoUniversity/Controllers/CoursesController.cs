@@ -53,6 +53,11 @@ namespace ContosoUniversity.Controllers
             return View();
         }
 
+        public IActionResult UpdateCourseCredits()
+        {
+            return View();
+        }
+
         // POST: Courses/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -123,6 +128,19 @@ namespace ContosoUniversity.Controllers
             }
             PopulateDepartmentsDropDownList(courseToUpdate.DepartmentID);
             return View(courseToUpdate);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateCourseCredits(int? multiplier)
+        {
+            if (multiplier != null)
+            {
+                ViewData["RowsAffected"] =
+                    await _context.Database.ExecuteSqlRawAsync(
+                        "UPDATE Course SET Credits = Credits * {0}",
+                        parameters: multiplier);
+            }
+            return View();
         }
 
         private void PopulateDepartmentsDropDownList(object selectedDepartment = null)
